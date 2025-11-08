@@ -75,3 +75,8 @@ body.loaded #splash {
   visibility: hidden;
   pointer-events: none;
 }
+
+* {
+  -webkit-tap-highlight-color: transparent; 
+  outline: none;                            
+}
