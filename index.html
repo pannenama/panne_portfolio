@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Pannenama's Place!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/windows.css" />
+  <link rel="stylesheet" href="styles/sections.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+</head>
+
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash">
+    <img src="assets/logo-animation.gif" alt="Loading..." />
+  </div>
+
+  <!-- Mobile Popup -->
+  <div id="mobilePopup">
+    <div class="popup-box">
+      <p>
+        Hello! This page looks better on <strong>PC</strong>, so some features
+        may be limited!
+      </p>
+      <button id="popupCloseBtn">Okay</button>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="app">
+    <header class="top-bar">
+      <div class="top-left">
+        <button title="Logo! Click to Reset the page." class="icon-button" id="logoBtn">
+          <img src="assets/logo.png" alt="Logo" />
+        </button>
+        <button class="icon-button" id="soundBtn" title="Toggle sound">
+          <img src="assets/sound.png" alt="Sound" />
+        </button>
+      </div>
+      <div class="top-right">
+        <button title="Theme Toggle Work in Progress..." id="themeBtn" class="icon-button">
+          <img src="assets/themeToggle.png" alt="Theme toggle" />
+        </button>
+      </div>
+    </header>
+
+    <main class="center-area">
+      <div class="mascot-group" id="mascotGroup">
+        <img src="assets/mascot.gif" alt="Mascot" class="mascot-img" />
+        <div class="mascot-text-box">
+          <span id="mascotText"></span>
+        </div>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn" data-window="about">
+        <div class="nav-icon">
+          <img src="assets/about.png" alt="About icon" />
+        </div>
+        <span>About</span>
+      </button>
+      <button class="nav-btn" data-window="contacts">
+        <div class="nav-icon">
+          <img src="assets/contacts.png" alt="Contacts icon" />
+        </div>
+        <span>Contacts</span>
+      </button>
+      <button class="nav-btn" data-window="skills">
+        <div class="nav-icon">
+          <img src="assets/skills.png" alt="Skills icon" />
+        </div>
+        <span>Skills</span>
+      </button>
+      <button class="nav-btn" data-window="gallery">
+        <div class="nav-icon">
+          <img src="assets/gallery.png" alt="Gallery icon" />
+        </div>
+        <span>Gallery</span>
+      </button>
+      <button class="nav-btn" data-window="portfolio">
+        <div class="nav-icon">
+          <img src="assets/portfolio.png" alt="Portfolio icon" />
+        </div>
+        <span>Portfolio</span>
+      </button>
+      <button class="nav-btn" data-window="experiences">
+        <div class="nav-icon">
+          <img src="assets/experiences.png" alt="Experiences icon" />
+        </div>
+        <span>Experiences</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Floating Windows Layer -->
+  <div id="windowLayer"></div>
+
+  <!-- Main script -->
+  <script src="scripts/windowContents.js"></script>
+  <script src="scripts/windowManager.js"></script>
+  <script src="scripts/sound.js"></script>
+  <script src="scripts/mobilePopup.js"></script>
+  <script src="scripts/app.js"></script>
+
+
+</body>
+
+</html>

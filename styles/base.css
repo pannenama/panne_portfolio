@@ -1,0 +1,77 @@
+:root {
+  --bg-color: #060718;
+  --grid-color: #21213a;
+  --window-bg: #ffffff;
+  --window-header-bg: #a2a2c2;
+  --window-header-text: #ffffff;
+  --window-text: #111111;
+  --accent: #ffffff;
+  --nav-text: #ffffff;
+  --font-main: "Montserrat", system-ui, sans-serif;
+  --font-pixel: "Pixelify Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #000016;
+  color: var(--nav-text);
+  overflow: hidden;
+  transition: background-color 0.6s ease;
+}
+
+/* Background grid */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body.loaded {
+  background-color: var(--bg-color);
+}
+
+body.loaded::before {
+  opacity: 1;
+}
+
+/* Splash Screen */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: #000016;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#splash img {
+  width: min(40vw, 130px);
+  height: auto;
+  image-rendering: pixelated;
+}
+
+body.loaded #splash {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

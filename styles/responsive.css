@@ -1,0 +1,144 @@
+/* General layout responsive */
+@media (max-width: 800px) {
+  .app {
+    padding: 12px 10px;
+  }
+
+  .mascot-img {
+    width: min(55vw, 220px);
+  }
+
+  .bottom-nav {
+    gap: 16px;
+  }
+
+  .nav-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-btn {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mascot-text-box {
+    font-size: 12px;
+    max-width: 90vw;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .bottom-nav {
+    gap: 10px;
+  }
+}
+
+/* Contacts */
+@media (max-width: 520px) {
+  .email-icon { width: 40px; height: 40px; }
+  .email-link { font-size: 14px; }
+  .social-links { gap: 20px; }
+  .social-links img { width: 38px; height: 38px; }
+}
+
+/* Skills */
+@media (max-width: 520px) {
+  .skills-columns {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .skills-heading {
+    font-size: 18px;
+  }
+
+  .tag {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .tools-grid img {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* Gallery */
+@media (max-width: 520px) {
+  .gallery-title {
+    font-size: 22px;
+  }
+  .gallery-divider {
+    font-size: 16px;
+  }
+  .video-embed iframe {
+    height: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .art-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .art-grid {
+    column-count: 2;
+  }
+}
+
+/* Portfolio */
+@media (max-width: 700px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project img.project-image {
+    width: 100%;
+  }
+
+  .project-info h2 {
+    font-size: 18px;
+  }
+
+  .project-info p {
+    font-size: 13px;
+  }
+}
+
+/* Experience */
+@media (max-width: 700px) {
+  .experience-item {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-img {
+    width: 100%;
+  }
+
+  .experience-text h2 {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .experience-text p {
+    font-size: 13px;
+  }
+
+  .section-divider {
+    font-size: 16px;
+  }
+}
+
+/* Mobile popup visibility */
+@media (max-width: 720px) {
+  #mobilePopup.active {
+    display: flex;
+  }
+}

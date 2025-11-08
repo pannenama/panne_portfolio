@@ -1,0 +1,197 @@
+/* Window Layer */
+#windowLayer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.window {
+  position: absolute;
+  background: var(--window-bg);
+  border-radius: 22px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  pointer-events: auto;
+  border: 2px solid #000;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+}
+
+.window.closing {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+}
+
+.window-header {
+  background: var(--window-header-bg);
+  color: var(--window-header-text);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: grab;
+  user-select: none;
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid #4d4d8e;
+}
+
+.window-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.window-header-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.window-header-icon img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.window-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.window-close:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 4px rgba(183, 177, 255, 0.8));
+}
+
+.window-body {
+  flex: 1;
+  padding: 16px 18px;
+  color: var(--window-text);
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-y: auto;
+}
+
+.window-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.window-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+}
+
+/* --- Mobile bottom-sheet style windows (base; media tweaks in responsive.css) --- */
+@media (max-width: 720px) {
+  .window {
+    position: fixed;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0;
+    top: auto !important;
+
+    width: 100vw !important;
+    height: 80vh !important;
+
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -10px 24px rgba(0, 0, 0, 0.6);
+
+    transform: translateY(100%);
+    opacity: 1;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+  }
+
+  .window.open {
+    transform: translateY(0);
+  }
+
+  .window.closing {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .window-header {
+    cursor: default;
+  }
+}
+
+/* --- Mobile Pop-up Styles --- */
+#mobilePopup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#mobilePopup.active {
+  display: flex;
+}
+
+.popup-box {
+  background: #ffffff;
+  color: #111;
+  width: 85%;
+  max-width: 360px;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: popIn 0.25s ease;
+}
+
+.popup-box strong {
+  color: #4b49b8;
+}
+
+#popupCloseBtn {
+  margin-top: 14px;
+  background: #4b49b8;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+#popupCloseBtn:hover {
+  background: #36349a;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
