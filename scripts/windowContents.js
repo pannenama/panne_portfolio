@@ -1,14 +1,14 @@
 window.WINDOW_CONFIG = {
-  about: { title: "About", icon: "assets/about.png", w: 420, h: 340 },
-  contacts: { title: "Contacts", icon: "assets/contacts.png", w: 500, h: 300 },
-  skills: { title: "Skills", icon: "assets/skills.png", w: 650, h: 300 },
-  gallery: { title: "Gallery", icon: "assets/gallery.png", w: 600, h: 400 },
-  portfolio: { title: "Portfolio", icon: "assets/portfolio.png", w: 800, h: 450 },
-  experiences: { title: "Experiences", icon: "assets/experiences.png", w: 800, h: 380 }
+    about: { title: "About", icon: "assets/about.png", w: 420, h: 340 },
+    contacts: { title: "Contacts", icon: "assets/contacts.png", w: 500, h: 300 },
+    skills: { title: "Skills", icon: "assets/skills.png", w: 650, h: 300 },
+    gallery: { title: "Gallery", icon: "assets/gallery.png", w: 600, h: 400 },
+    portfolio: { title: "Portfolio", icon: "assets/portfolio.png", w: 800, h: 450 },
+    experiences: { title: "Experiences", icon: "assets/experiences.png", w: 800, h: 380 }
 };
 
 window.WINDOW_CONTENTS = {
-  about: `
+    about: `
     <section class="about-section">
       <header class="about-header">
         <div class="about-text-block">
@@ -67,7 +67,7 @@ window.WINDOW_CONTENTS = {
     </section>
   `,
 
-  contacts: `
+    contacts: `
     <section class="contacts-section">
       <p>
         For <strong>business inquiries</strong>, please send me a message here:
@@ -101,7 +101,7 @@ window.WINDOW_CONTENTS = {
     </section>
   `,
 
-  skills: `
+    skills: `
     <section class="skills-section">
       <div class="skills-columns">
         <div class="skills-col">
@@ -142,6 +142,7 @@ window.WINDOW_CONTENTS = {
         <img src="assets/vs.png" alt="Visual Studio" title="Visual Studio" />
         <img src="assets/vscode.png" alt="VS Code" title="Visual Studio Code" />
         <img src="assets/git.png" alt="Git" title="Git" />
+        <img src="assets/figma.png" alt="Figma" title="Figma" />
       </div>
 
       <div class="skills-divider"><span>Art Tools!</span></div>
@@ -152,11 +153,13 @@ window.WINDOW_CONTENTS = {
         <img src="assets/davinci.png" alt="DaVinci Resolve" title="DaVinci Resolve" />
         <img src="assets/firealpaca.png" alt="FireAlpaca" title="FireAlpaca" />
         <img src="assets/sai.png" alt="Paint Tool Sai" title="Paint Tool Sai" />
+        <img src="assets/canva.png" alt="Canva" title="Canva" />
+
       </div>
     </section>
   `,
 
-  gallery: `
+    gallery: `
     <section class="gallery-section">
       <h1 class="gallery-title">Artworks</h1>
 
@@ -214,7 +217,7 @@ window.WINDOW_CONTENTS = {
     </section>
   `,
 
-  portfolio: `
+    portfolio: `
     <section class="portfolio-section">
       <h1 class="portfolio-title">Tech-Projects!</h1>
       <p class="portfolio-intro">
@@ -284,7 +287,7 @@ window.WINDOW_CONTENTS = {
     </section>
   `,
 
-  experiences: `
+    experiences: `
     <section class="experience-section">
       <div class="section-divider"><span>Competitions</span></div>
 
