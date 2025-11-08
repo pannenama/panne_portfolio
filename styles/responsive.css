@@ -151,7 +151,7 @@
     align-items: center;
     row-gap: 2px;        /* tighter vertical space */
     column-gap: 50px;    /* slightly closer horizontally */
-    padding-bottom: 40px; /* small breathing space from bottom edge */
+    padding-bottom: 60px; /* small breathing space from bottom edge */
   }
 
   .nav-btn {
