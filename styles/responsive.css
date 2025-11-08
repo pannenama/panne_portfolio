@@ -142,3 +142,25 @@
     display: flex;
   }
 }
+/* Mobile: compact 2x3 nav grid */
+@media (max-width: 520px) {
+  .bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    row-gap: 2px;        /* tighter vertical space */
+    column-gap: 50px;    /* slightly closer horizontally */
+    padding-bottom: 40px; /* small breathing space from bottom edge */
+  }
+
+  .nav-btn {
+    font-size: 9px;
+    gap: 2px;            /* icon + label gap smaller */
+  }
+
+  .nav-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

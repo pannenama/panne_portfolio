@@ -466,9 +466,11 @@
 }
 
 .section-divider {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin: 18px 0 22px;
-  position: relative;
   font-family: var(--font-pixel);
   font-size: 18px;
 }
@@ -476,15 +478,12 @@
 .section-divider::before,
 .section-divider::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  width: 38%;
+  flex: 1;
   height: 2px;
   background: #000;
+  border-radius: 999px;
 }
 
-.section-divider::before { left: 0; }
-.section-divider::after { right: 0; }
 
 .experience-item {
   display: flex;
